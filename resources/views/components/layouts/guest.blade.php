@@ -43,7 +43,7 @@
     <!-- Styles -->
     @livewireStyles
     @filamentStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'],'themes/Zero')
+    @vite(['resources/css/app.css', 'resources/js/app.js'],'themes/Four')
 
     <!-- Custom Styles -->
     @stack('styles')

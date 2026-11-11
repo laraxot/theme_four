@@ -1,20 +1,16 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
-import { google } from 'laravel-vite-plugin/fonts';
 
 export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
-            fonts: [
-                google('Inter', {
-                    weights: [400, 500, 600, 700],
-                })
-            ],
-            //publicDirectory: '../../../public_html',
-
-            //buildDirectory: 'themes/Four',
+            // Gli asset vengono serviti da /themes/Four/: public_html/themes/Four e' un symlink a
+            // laravel/Themes/Four/public (nessuna copia, nessun `npm run copy`).
+            buildDirectory: 'themes/Four',
+            // npm run dev: Laravel cerca il file hot in public_path('hot'), cioe' public_html/hot.
+            hotFile: '../../../public_html/hot',
             refresh: true,
         }),
         //vue(),
@@ -22,7 +18,8 @@ export default defineConfig({
 
     ],
     build: {
-        outDir: '../public/',
+        // Dentro il tema: e' la cartella esposta dal symlink public_html/themes/Four.
+        outDir: 'public',
         emptyOutDir: true,
       },
 });

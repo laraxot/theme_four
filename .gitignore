@@ -2,3 +2,4 @@
 package-lock.json
 *.lock
 /.docs-archive/
+/public/hot

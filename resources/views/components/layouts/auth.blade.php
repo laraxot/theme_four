@@ -28,7 +28,7 @@
     <!-- Styles -->
     @livewireStyles
     @filamentStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/Zero')
+    @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/Four')
 
     {{--
         This page renders a Filament schema widget (LoginWidget) outside of any
