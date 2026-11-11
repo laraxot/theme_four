@@ -6,7 +6,7 @@ name('home');
 
 ?>
 
-<x-layouts.guest>
+<x-pub_theme::layouts.guest>
     @volt('home')
     <div>
 
@@ -14,4 +14,4 @@ name('home');
 
     </div>
     @endvolt
-</x-layouts.guest>
+</x-pub_theme::layouts.guest>

@@ -15,10 +15,10 @@ new class extends Component {
 };
 ?>
 
-<x-layouts.app>
+<x-pub_theme::layouts.app>
     @volt('container0')
     <div>
         <x-page side="content" :slug="$container0" />
     </div>
     @endvolt
-</x-layouts.app>
+</x-pub_theme::layouts.app>

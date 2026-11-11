@@ -25,7 +25,7 @@ new class extends Component {
 };
 ?>
 
-<x-layouts.app>
+<x-pub_theme::layouts.app>
     @volt('container0.view')
         <x-page
             side="content"
@@ -33,4 +33,4 @@ new class extends Component {
             :data="$data"
         />
     @endvolt
-</x-layouts.app>
+</x-pub_theme::layouts.app>
